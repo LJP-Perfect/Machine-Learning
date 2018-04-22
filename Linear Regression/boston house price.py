@@ -55,7 +55,6 @@ with tf.Session() as sess:
 
         #k-fold cross validation
         kf=KFold(n_splits=10)
-        pred_error=0
         for train_index,test_index in kf.split(data):
             X_train,X_test=data[train_index],data[test_index]
             Y_train,Y_test=label[train_index],label[test_index]
